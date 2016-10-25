@@ -1,0 +1,119 @@
+
+<!DOCTYPE html>
+
+<html>
+<head>
+  <title>rockpaperscissors</title>
+  <meta charset="utf-8">
+
+  <style>
+  h1{color:darkgray;font-size:70px; font-family:'Oswald',sans-serif; }
+  li{list-style-type: square; font-family: 'Arimo', sans-serif}
+  h2,h3,h4{font-family: "helvetica";font-weight: 600; text-transform: uppercase;}
+
+  green {background-color: lightgreen;
+  color: darkgreen}
+
+  red {background-color: lightpink;
+  color: darkred}
+
+  yellow {background-color: darkgoldenrod;
+  color: white}
+
+.lookhere {text-decoration: underline overline}
+
+mark {
+    background-color: steelblue;
+    color: white;
+    font-family: "helvetica";font-weight: 600; text-transform: uppercase;
+}
+  </style>
+
+  <style>
+  body {font-family: 'Arimo', sans-serif; line-height: 1.2;}
+
+  </style>
+
+<link href="https://fonts.googleapis.com/css?family=Arimo|Oswald:300,400,700|Slabo+27px|Ubuntu&subset=latin-ext" rel="stylesheet">
+
+</head>
+<body>
+
+  <table align="center">
+    <tr>
+      <td align="center" colspan="120">
+          <h1>Rock Paper Scissors</h1>
+      </td>
+    </tr>
+      <tr>
+
+        <td align = "left" colspan ="40">
+          <a href="http://localhost:3000/rock"><mark>Play Rock</mark></a>
+        </td>
+        <td align = "center" colspan ="40">
+          <a href="http://localhost:3000/paper"><mark>Play Paper</mark></a>
+        </td>
+        <td align = "right" colspan = "40">
+          <a href="http://localhost:3000/scissors"><mark>Play Scissors</mark></a>
+        </td>
+      </tr>
+
+  </table>
+
+  <table align = "center">
+
+    <tr>
+      <td>
+        <h2><green> Paper </green></h2>
+      </td>
+      <td>
+      <% if @computer_move == "rock" %>
+        <h2><red> Rock</red> </h2>
+        <% elsif @computer_move == "scissors" %>
+        <h2><red> Scissors</red> </h2>
+        <% elsif @computer_move == "paper" %>
+        <h2><red>Paper</red> </h2>
+        <% end %>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a href = "http://localhost:3000/paper">
+            <img src = "http://localhost:3000/assets/images/paper.png" width = "200">
+          </a>
+      </td>
+      <td>
+        <% if @computer_move == "rock" %>
+        <a href = "http://localhost:3000/rock">
+            <img src = "http://localhost:3000/assets/images/rock.png" width = "200">
+          </a>
+          <% elsif @computer_move == "scissors" %>
+          <a href = "http://localhost:3000/scissors">
+              <img src = "http://localhost:3000/assets/images/scissors.png" width = "200">
+            </a>
+          <% elsif @computer_move == "paper" %>
+          <a href = "http://localhost:3000/paper">
+              <img src = "http://localhost:3000/assets/images/paper.png" width = "200">
+            </a>
+          <% end %>
+
+      </td>
+    </tr>
+</table>
+
+<table align="center">
+  <tr>
+    <td>
+      <% if @computer_move == "rock" %>
+      <h3><green> You win! </green></h3>
+
+      <% elsif @computer_move == "scissors" %>
+      <h3><red> You lose! </red></h3>
+
+      <% elsif @computer_move == "paper" %>
+      <h3><yellow> You tied!</yellow></h3>
+
+      <% end %>
+    </td>
+  </tr>
+</table>

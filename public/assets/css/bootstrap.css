@@ -43,7 +43,7 @@ template {
   display: none;
 }
 a {
-  background-color: transparent;
+  background-color: transparent;;
 }
 a:active,
 a:hover {
@@ -200,7 +200,8 @@ th {
   }
   a,
   a:visited {
-    text-decoration: underline;
+    background: blue
+    color: white
   }
   a[href]:after {
     content: " (" attr(href) ")";
